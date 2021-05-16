@@ -1,7 +1,7 @@
 # export FLASK_APP=main.py
 from flask import Flask
 from flask import redirect
-from AudioVisual import AudioVisual
+from Audiovisual.AudioVisual import AudioVisual
 
 app = Flask(__name__)
 
@@ -11,11 +11,6 @@ app.register_blueprint(AudioVisual)
 @app.errorhandler(404)
 def page_not_found(e):
     return redirect("/404", code=302)
-
-
-@app.route("/")
-def hello():
-    return "Hello World!"
 
 
 @app.route("/404")
