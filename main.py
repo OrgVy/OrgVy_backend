@@ -1,7 +1,11 @@
 # export FLASK_APP=main.py
+# flask run -p 8080
 from flask import Flask
 from flask import redirect
 from Audiovisual.AudioVisual import AudioVisual
+import logger
+
+
 
 app = Flask(__name__)
 
