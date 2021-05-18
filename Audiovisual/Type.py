@@ -10,7 +10,7 @@ def get_types():
         try:
             connection = connectionDB.open_connection()
             connection_cursor = connection.cursor()
-            connection_cursor.execute("SELECT * FROM OrgVy.type;")
+            connection_cursor.execute("SELECT * FROM type;")
             result = connection_cursor.fetchall()
             aux = []
             for type in result:
@@ -25,7 +25,7 @@ def get_types():
             old = request.args['Old']
             new = request.args['New']
 
-            sql = "UPDATE `OrgVy`.`type` SET `name`='" + new + "' WHERE `name`='" + old + "';"
+            sql = "UPDATE `type` SET `name`='" + new + "' WHERE `name`='" + old + "';"
             connection = connectionDB.open_connection()
             connection_cursor = connection.cursor()
             connection_cursor.execute(sql)
@@ -46,7 +46,7 @@ def post_category(type):
         try:
             connection = connectionDB.open_connection()
             connection_cursor = connection.cursor()
-            connection_cursor.execute("INSERT INTO `OrgVy`.`type` (`name`) VALUES ('" + type + "');")
+            connection_cursor.execute("INSERT INTO `type` (`name`) VALUES ('" + type + "');")
             connection.commit()
             connection_cursor.close()
             connection.close()

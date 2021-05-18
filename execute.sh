@@ -1,2 +1,2 @@
 export FLASK_APP=main.py
-flask run -p 8080
+flask run -h 0.0.0.0 -p 8000

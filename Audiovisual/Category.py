@@ -11,7 +11,7 @@ def get_categories():
         try:
             connection = connectionDB.open_connection()
             connection_cursor = connection.cursor()
-            connection_cursor.execute("SELECT * FROM OrgVy.category;")
+            connection_cursor.execute("SELECT * FROM category;")
             result = connection_cursor.fetchall()
             aux = []
             for category in result:
@@ -26,7 +26,7 @@ def get_categories():
             old = request.args['Old']
             new = request.args['New']
 
-            sql = "UPDATE `OrgVy`.`category` SET `name`='" + new + "' WHERE `name`='" + old + "';"
+            sql = "UPDATE `category` SET `name`='" + new + "' WHERE `name`='" + old + "';"
             connection = connectionDB.open_connection()
             connection_cursor = connection.cursor()
             connection_cursor.execute(sql)
@@ -47,7 +47,7 @@ def post_category(category):
         try:
             connection = connectionDB.open_connection()
             connection_cursor = connection.cursor()
-            connection_cursor.execute("INSERT INTO `OrgVy`.`category` (`name`) VALUES ('" + category + "');")
+            connection_cursor.execute("INSERT INTO `category` (`name`) VALUES ('" + category + "');")
             connection.commit()
             connection_cursor.close()
             connection.close()

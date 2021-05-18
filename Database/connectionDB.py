@@ -1,10 +1,15 @@
 import mysql.connector
 import sys
-
+'''
 database = "OrgVy"
 host = "localhost"
 user = "root"
 password = "Password123#@!"
+'''
+database = "ikHV5b7fXF"
+host = "remotemysql.com"
+user = "ikHV5b7fXF"
+password = "sub54mrAjY"
 
 
 def open_connection():
