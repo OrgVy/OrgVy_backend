@@ -1,8 +1,9 @@
 from flask import Flask
-from flask import redirect
 from Audiovisual.AudioVisual import AudioVisual
 from Audiovisual.Category import Category
 from Audiovisual.Type import Type
+from User.User import User
+from User.Login import Login
 import logger
 from flask_cors import CORS
 
@@ -12,6 +13,8 @@ CORS(app)
 app.register_blueprint(AudioVisual)
 app.register_blueprint(Category)
 app.register_blueprint(Type)
+app.register_blueprint(Login)
+app.register_blueprint(User)
 
 
 @app.errorhandler(404)

@@ -25,17 +25,17 @@ create table if not exists `Audiovisual` (
     constraint foreign key (`categories`) references `category` (`name`) on delete no action on update no action
 );
 
-INSERT INTO `OrgVy`.`type` (`name`) VALUES ('Anime');
-INSERT INTO `OrgVy`.`type` (`name`) VALUES ('Serie');
-INSERT INTO `OrgVy`.`type` (`name`) VALUES ('Pelicula');
-INSERT INTO `OrgVy`.`type` (`name`) VALUES ('Libro');
-INSERT INTO `OrgVy`.`type` (`name`) VALUES ('Novela');
+INSERT INTO `type` (`name`) VALUES ('Anime');
+INSERT INTO `type` (`name`) VALUES ('Serie');
+INSERT INTO `type` (`name`) VALUES ('Pelicula');
+INSERT INTO `type` (`name`) VALUES ('Libro');
+INSERT INTO `type` (`name`) VALUES ('Novela');
 
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('Romance');
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('Gore');
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('Fantasia');
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('Psicologico');
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('C. Ficcion');
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('Drama');
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('Comedia');
-INSERT INTO `OrgVy`.`category` (`name`) VALUES ('Ecchi');
+INSERT INTO `category` (`name`) VALUES ('Romance');
+INSERT INTO `category` (`name`) VALUES ('Gore');
+INSERT INTO `category` (`name`) VALUES ('Fantasia');
+INSERT INTO `category` (`name`) VALUES ('Psicologico');
+INSERT INTO `category` (`name`) VALUES ('C. Ficcion');
+INSERT INTO `category` (`name`) VALUES ('Drama');
+INSERT INTO `category` (`name`) VALUES ('Comedia');
+INSERT INTO `category` (`name`) VALUES ('Ecchi');
