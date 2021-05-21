@@ -4,8 +4,11 @@ from Audiovisual.AudioVisual import AudioVisual
 from Audiovisual.Category import Category
 from Audiovisual.Type import Type
 import logger
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 app.register_blueprint(AudioVisual)
 app.register_blueprint(Category)
 app.register_blueprint(Type)
