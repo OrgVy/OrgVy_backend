@@ -7,9 +7,8 @@ import Database.connectionDB as connectionDB
 @Login.route("", methods=['GET'])
 def get_login():
     try:
-        data = request.get_json()
-        email = data["Email"]
-        password = data["Password"]
+        email = request.args.get('Email')
+        password = request.args.get('Password')
     except:
         return {"400": "Bad request"}, 400
     if request.method == 'GET':
